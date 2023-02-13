@@ -4,6 +4,9 @@ const app = express();
 const dotenv = require('dotenv');
 dotenv.config({path : './config/.env'});
 
+const dbConnect = require('./config/mongooseDb');
+dbConnect();
+
 const auth = require('./routes/authRouter');
 const user = require('./routes/userRoute');
 
